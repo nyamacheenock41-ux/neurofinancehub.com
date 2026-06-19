@@ -1,24 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Privacy Policy</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — NeuroFinance Hub</title>
+<meta name="description" content="How NeuroFinance Hub collects, uses, and protects your information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-</head>
+<style>
+  :root{
+    --ink:#0B1320;
+    --ink-soft:#121d33;
+    --paper:#F5F1E8;
+    --signal:#3DDC97;
+    --alert:#FF6B5E;
+    --slate:#8B95A8;
+    --line: rgba(245,241,232,0.12);
+    --font-display:'Fraunces', serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'JetBrains Mono', monospace;
+  }
 
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{
+    background:var(--ink); color:var(--paper);
+    font-family:var(--font-body); line-height:1.7;
+  }
+  a{ color:var(--signal); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  .wrap{ max-width:760px; margin:0 auto; padding:0 28px; }
+
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,19,32,0.85);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 28px; max-width:1140px; margin:0 auto;
+  }
+  .logo{
+    font-family:var(--font-display); font-weight:600; font-size:1.25rem;
+    display:flex; align-items:center; gap:10px; color:var(--paper); text-decoration:none;
+  }
+  .logo .dot{
+    width:10px; height:10px; border-radius:50%; background:var(--signal);
+    box-shadow:0 0 0 4px rgba(61,220,151,0.15);
+  }
+  .nav-links{ display:flex; gap:32px; font-size:0.92rem; color:var(--slate); }
+  .nav-links a{ color:var(--slate); transition:color .2s; }
+  .nav-links a:hover{ color:var(--paper); text-decoration:none; }
+
+  main{ padding:72px 0 100px; }
+
+  .eyebrow{
+    font-family:var(--font-mono); font-size:0.78rem; color:var(--signal);
+    text-transform:uppercase; letter-spacing:0.12em;
+    display:flex; align-items:center; gap:10px; margin-bottom:18px;
+  }
+  .eyebrow::before{ content:''; width:24px; height:1px; background:var(--signal); }
+
+  h1{
+    font-family:var(--font-display); font-size:clamp(2rem, 4vw, 2.8rem);
+    font-weight:600; margin-bottom:12px;
+  }
+  .last-updated{ color:var(--slate); font-size:0.88rem; margin-bottom:48px; font-family:var(--font-mono); }
+
+  .toc{
+    background:var(--ink-soft); border:1px solid var(--line); border-radius:14px;
+    padding:24px 28px; margin-bottom:48px;
+  }
+  .toc h2{ font-size:0.8rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--slate); margin-bottom:14px; font-weight:600; }
+  .toc ol{ list-style:none; counter-reset:toc; display:grid; gap:8px; }
+  .toc li{ counter-increment:toc; font-size:0.92rem; }
+  .toc li::before{
+    content:counter(toc) "."; color:var(--signal); font-family:var(--font-mono);
+    margin-right:8px; font-size:0.85rem;
+  }
+  .toc a{ color:var(--paper); }
+  .toc a:hover{ color:var(--signal); }
+
+  section.policy-section{ margin-bottom:44px; }
+  h2{
+    font-family:var(--font-display); font-size:1.4rem; font-weight:600;
+    margin-bottom:14px; padding-top:8px;
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .num{ color:var(--signal); font-family:var(--font-mono); font-size:1rem; }
+  p{ color:var(--slate); font-size:0.97rem; margin-bottom:14px; }
+  p strong, li strong{ color:var(--paper); }
+  ul{ color:var(--slate); font-size:0.97rem; padding-left:20px; margin-bottom:14px; }
+  li{ margin-bottom:8px; }
+
+  .highlight-box{
+    background:var(--ink-soft); border:1px solid var(--line); border-left:3px solid var(--signal);
+    border-radius:8px; padding:18px 22px; margin:18px 0;
+    font-size:0.92rem; color:var(--paper);
+  }
+
+  table{ width:100%; border-collapse:collapse; margin:18px 0; font-size:0.9rem; }
+  th, td{ text-align:left; padding:10px 14px; border-bottom:1px solid var(--line); color:var(--slate); }
+  th{ color:var(--paper); font-weight:600; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.04em; }
+
+  .back-top{
+    display:inline-flex; align-items:center; gap:6px; font-size:0.85rem;
+    color:var(--slate); margin-top:8px;
+  }
+
+  footer{ border-top:1px solid var(--line); padding:36px 0; text-align:center; }
+  footer p{ color:var(--slate); font-size:0.82rem; }
+
+  @media (max-width: 700px){
+    .nav-links{ display:none; }
+  }
+</style>
+</head>
 <body>
 
-<section>
-<h1>Privacy Policy</h1>
+<header>
+  <nav>
+    <a href="index.html" class="logo"><span class="dot"></span>NeuroFinance Hub</a>
+    <div class="nav-links">
+      <a href="index.html#articles">Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
 
-<p>
-We value your privacy. NeuroFinance Hub may collect anonymous analytics data, cookies, and information voluntarily submitted by users.
-</p>
+<main>
+  <div class="wrap">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: June 19, 2026</p>
 
-<p>
-We do not sell personal information to third parties.
-</p>
+    <div class="toc">
+      <h2>On this page</h2>
+      <ol>
+        <li><a href="#information-we-collect">Information we collect</a></li>
+        <li><a href="#how-we-use-it">How we use your information</a></li>
+        <li><a href="#cookies">Cookies &amp; analytics</a></li>
+        <li><a href="#third-parties">Third-party services</a></li>
+        <li><a href="#sharing">Do we sell or share your data?</a></li>
+        <li><a href="#your-rights">Your rights &amp; choices</a></li>
+        <li><a href="#children">Children's privacy</a></li>
+        <li><a href="#changes">Changes to this policy</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ol>
+    </div>
 
-</section>
+    <p>NeuroFinance Hub ("we," "us," or "our") respects your privacy. This policy explains what information we collect when you visit <strong>neurofinancehub.com</strong>, how we use it, and the choices you have. By using this site, you agree to the practices described below.</p>
+
+    <section class="policy-section" id="information-we-collect">
+      <h2><span class="num">01</span> Information we collect</h2>
+      <p>We collect information in three ways:</p>
+      <ul>
+        <li><strong>Information you provide directly</strong> — such as your name and email address when you subscribe to our newsletter or submit the contact form.</li>
+        <li><strong>Automatically collected data</strong> — including your IP address, browser type, device type, pages visited, and time spent on the site, gathered through analytics tools.</li>
+        <li><strong>Cookies and similar technologies</strong> — small files stored on your device to remember preferences and measure site usage. See Section 3 for details.</li>
+      </ul>
+      <p>We do not knowingly collect sensitive financial account information, passwords, or government ID numbers through this site.</p>
+    </section>
+
+    <section class="policy-section" id="how-we-use-it">
+      <h2><span class="num">02</span> How we use your information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Send newsletters or content updates you've opted into</li>
+        <li>Respond to messages submitted through our contact form</li>
+        <li>Understand how visitors use the site, so we can improve content and design</li>
+        <li>Detect and prevent fraud, spam, or abuse</li>
+        <li>Comply with legal obligations where applicable</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="cookies">
+      <h2><span class="num">03</span> Cookies &amp; analytics</h2>
+      <p>We use cookies and analytics tools (such as Google Analytics) to understand how visitors interact with our site. These tools may collect data like your approximate location, device type, and browsing behavior on this site.</p>
+      <div class="highlight-box">
+        You can disable cookies in your browser settings at any time. Doing so may affect some site functionality, such as remembering newsletter preferences.
+      </div>
+      <table>
+        <tr><th>Cookie type</th><th>Purpose</th></tr>
+        <tr><td>Essential</td><td>Basic site functionality</td></tr>
+        <tr><td>Analytics</td><td>Understand traffic and usage patterns</td></tr>
+        <tr><td>Preference</td><td>Remember settings like newsletter sign-up status</td></tr>
+      </table>
+    </section>
+
+    <section class="policy-section" id="third-parties">
+      <h2><span class="num">04</span> Third-party services</h2>
+      <p>We may use trusted third-party services to operate this site, including:</p>
+      <ul>
+        <li><strong>Email/newsletter providers</strong> (e.g., Mailchimp, ConvertKit, or Beehiiv) to manage subscriptions</li>
+        <li><strong>Analytics providers</strong> (e.g., Google Analytics) to measure site traffic</li>
+        <li><strong>Hosting providers</strong> (GitHub Pages) to serve this website</li>
+        <li><strong>Advertising partners</strong>, if and when we run ads or affiliate links — these may use their own cookies subject to their own privacy policies</li>
+      </ul>
+      <p>These providers process data according to their own privacy policies, which we encourage you to review.</p>
+    </section>
+
+    <section class="policy-section" id="sharing">
+      <h2><span class="num">05</span> Do we sell or share your data?</h2>
+      <p><strong>We do not sell your personal information to third parties.</strong> We may share limited data with service providers listed above solely to operate the site (e.g., sending newsletters), and only to the extent necessary for them to perform that function.</p>
+    </section>
+
+    <section class="policy-section" id="your-rights">
+      <h2><span class="num">06</span> Your rights &amp; choices</h2>
+      <p>Depending on your location, you may have the right to:</p>
+      <ul>
+        <li>Request access to the personal data we hold about you</li>
+        <li>Request correction or deletion of your data</li>
+        <li>Opt out of marketing emails at any time via the unsubscribe link</li>
+        <li>Object to or restrict certain data processing</li>
+      </ul>
+      <p>To exercise any of these rights, contact us using the details in Section 9.</p>
+    </section>
+
+    <section class="policy-section" id="children">
+      <h2><span class="num">07</span> Children's privacy</h2>
+      <p>This site is not directed at children under 13 (or the relevant minimum age in your jurisdiction), and we do not knowingly collect personal information from children.</p>
+    </section>
+
+    <section class="policy-section" id="changes">
+      <h2><span class="num">08</span> Changes to this policy</h2>
+      <p>We may update this Privacy Policy from time to time. The "Last updated" date at the top of this page reflects the most recent revision. Continued use of the site after changes constitutes acceptance of the updated policy.</p>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <h2><span class="num">09</span> Contact us</h2>
+      <p>If you have questions about this Privacy Policy or how we handle your data, reach out at <a href="mailto:contact@neurofinancehub.com">contact@neurofinancehub.com</a> or via our <a href="contact.html">contact page</a>.</p>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 NeuroFinance Hub. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
