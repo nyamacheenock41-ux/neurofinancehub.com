@@ -1,28 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About NeuroFinance Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — NeuroFinance Hub</title>
+<meta name="description" content="NeuroFinance Hub helps readers build financial knowledge through investing, trading, personal finance, AI, and online income education.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
-</head>
+<style>
+  /* Page-specific styles only — everything else inherited from style.css */
+  main{ padding:0; }
 
+  .about-hero{
+    padding:90px 0 60px;
+    border-bottom:1px solid var(--line);
+  }
+  .about-hero .lede{
+    color:var(--slate); font-size:1.1rem; max-width:600px; margin-top:18px;
+  }
+
+  .mission-row{
+    display:grid; grid-template-columns:1fr 1fr; gap:48px;
+    padding:64px 0; border-bottom:1px solid var(--line);
+  }
+  .mission-row h2{ margin-bottom:16px; }
+  .mission-row p{ font-size:1rem; }
+
+  .pillars{
+    padding:64px 0; border-bottom:1px solid var(--line);
+  }
+  .pillar-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:32px;
+  }
+  .pillar-card{
+    background:var(--ink-soft); border:1px solid var(--line); border-radius:14px;
+    padding:26px;
+  }
+  .pillar-card .icon{
+    width:40px; height:40px; border-radius:10px;
+    background:rgba(61,220,151,0.1); border:1px solid rgba(61,220,151,0.25);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--signal); margin-bottom:16px;
+  }
+  .pillar-card h3{ font-size:1.05rem; margin-bottom:8px; }
+  .pillar-card p{ font-size:0.88rem; margin-bottom:0; }
+
+  .trust-section{
+    padding:64px 0; border-bottom:1px solid var(--line);
+  }
+  .trust-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; margin-top:32px;
+  }
+  .trust-card{
+    text-align:center; padding:28px 20px;
+  }
+  .trust-card .num{
+    font-family:var(--font-mono); font-size:2rem; color:var(--signal); font-weight:500;
+  }
+  .trust-card .label{ color:var(--slate); font-size:0.88rem; margin-top:6px; }
+
+  .standards-box{
+    background:var(--ink-soft); border:1px solid var(--line); border-left:3px solid var(--signal);
+    border-radius:10px; padding:24px 28px; margin-top:32px;
+  }
+  .standards-box h3{ font-size:1rem; margin-bottom:10px; }
+  .standards-box ul{ color:var(--slate); font-size:0.92rem; padding-left:20px; }
+  .standards-box li{ margin-bottom:8px; }
+
+  .cta-band{
+    padding:64px 0; text-align:center;
+  }
+  .cta-band h2{ margin-bottom:14px; }
+  .cta-band p{ max-width:480px; margin:0 auto 28px; }
+  .cta-buttons{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width: 860px){
+    .mission-row, .pillar-grid, .trust-grid{ grid-template-columns:1fr; }
+  }
+</style>
+</head>
 <body>
 
-<nav>
-    <div class="logo">NeuroFinance Hub</div>
-</nav>
+<header>
+  <nav>
+    <a href="index.html" class="logo"><span class="dot"></span>NeuroFinance Hub</a>
+    <div class="nav-links">
+      <a href="index.html#articles">Articles</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="index.html#biases">Bias Library</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="index.html#newsletter" class="nav-cta">Get the digest</a>
+  </nav>
+</header>
 
-<section>
-<h1>About Us</h1>
+<main>
 
-<p>
-NeuroFinance Hub helps readers improve their financial knowledge through investing, trading, personal finance, artificial intelligence, and online business education.
-</p>
+  <section class="about-hero">
+    <div class="wrap">
+      <div class="eyebrow">About us</div>
+      <h1>We study why smart people make bad money decisions.</h1>
+      <p class="lede">NeuroFinance Hub helps readers build real financial knowledge through investing, trading, personal finance, AI, and online income education — grounded in how the brain actually behaves under uncertainty, not just generic budgeting advice.</p>
+    </div>
+  </section>
 
-<p>
-Our mission is to provide practical financial insights that empower individuals to build wealth and achieve financial freedom.
-</p>
+  <section class="mission-row">
+    <div class="wrap" style="display:contents;">
+      <div>
+        <h2>Our mission</h2>
+        <p>Most financial advice tells you <em>what</em> to do — save more, invest early, diversify. It rarely explains <em>why</em> you don't already do those things, even when you know better.</p>
+        <p>We exist to close that gap: practical financial education paired with the behavioral science of why money decisions are so hard to get right in the moment.</p>
+      </div>
+      <div>
+        <h2>What we believe</h2>
+        <p>Financial freedom isn't just a spreadsheet problem. It's a psychology problem wearing a spreadsheet's clothes. Cognitive biases like loss aversion, anchoring, and present bias quietly steer decisions long before logic gets a vote.</p>
+        <p>Understanding those patterns — and building small structural habits around them — works better than relying on willpower alone.</p>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <section class="pillars">
+    <div class="wrap">
+      <h2>What we cover</h2>
+      <p>Five areas, one lens: the psychology behind the decision.</p>
+      <div class="pillar-grid">
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h3>Personal Finance</h3>
+          <p>Budgeting, saving, and debt strategies that account for how people actually behave, not how they should.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 5-5"/></svg></div>
+          <h3>Investing</h3>
+          <p>Long-term wealth-building fundamentals, explained without jargon or hype.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/></svg></div>
+          <h3>Trading</h3>
+          <p>The psychology of risk, timing, and why most traders lose to their own emotions before the market.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg></div>
+          <h3>Artificial Intelligence</h3>
+          <p>Practical AI tools that genuinely improve financial decisions — not hype, not affiliate filler.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3>Online Income</h3>
+          <p>Realistic paths to additional income streams, with honest framing about effort versus reward.</p>
+        </div>
+
+        <div class="pillar-card">
+          <div class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 5.77 5.07 5.07 0 0019.91 1.5s-1.05-.3-3.41 1.36a13.38 13.38 0 00-7 0C7.16 1.2 6.1 1.5 6.1 1.5a5.07 5.07 0 00-.09 4.27 5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 6.96A3.37 3.37 0 0010 19v3"/></svg></div>
+          <h3>Bias Library</h3>
+          <p>A growing reference of the cognitive biases that quietly shape financial behavior.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="trust-section">
+    <div class="wrap">
+      <h2>How we work</h2>
+      <p>A few standards we hold ourselves to, since this is a high-trust topic.</p>
+
+      <div class="standards-box">
+        <h3>Editorial standards</h3>
+        <ul>
+          <li>We don't give individualized financial advice — content here is educational, not a substitute for a licensed financial advisor.</li>
+          <li>When we mention tools or products, any affiliate relationship is disclosed clearly in the article.</li>
+          <li>We update articles when facts, rates, or tools change rather than leaving stale information live.</li>
+          <li>We separate opinion from fact and flag predictions as predictions, not certainties.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Want the short version?</h2>
+      <p>One bias, one fix, every Friday — no spam, unsubscribe anytime.</p>
+      <div class="cta-buttons">
+        <a href="index.html#newsletter" class="btn-primary">Join the newsletter</a>
+        <a href="contact.html" class="btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 NeuroFinance Hub. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
